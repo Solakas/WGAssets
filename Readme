@@ -1,0 +1,245 @@
+# Wave Grocery - Image Assets Reference
+
+This document lists all product IDs, category IDs, and other image assets used in the Wave Grocery app. Use this as a reference when uploading your own images.
+
+## 📦 Product Images
+
+### Cheese Category (ID: `cheese`)
+- **Product 1**: Aged Cheddar Premium 200g - Retailer: GroceryCo
+- **Product 2**: Greek Feta Cheese 300g - Retailer: FreshMart
+- **Product 3**: Mozzarella Buffalo 250g - Retailer: GroceryCo
+- **Product 4**: Parmesan Reggiano 150g - Retailer: FreshMart
+
+### Fresh Meat Category (ID: `fresh-meat`)
+- **Product 11**: Prime Beef Steak 500g - Retailer: MeatMarket
+- **Product 12**: Organic Chicken Breast 400g - Retailer: FreshMart
+- **Product 13**: Grass-Fed Ground Beef 600g - Retailer: MeatMarket
+- **Product 14**: Lamb Chops 450g - Retailer: GroceryCo
+
+### Deli Category (ID: `deli`)
+- **Product 21**: Italian Prosciutto 200g - Retailer: DeliCorner
+- **Product 22**: Honey Roast Ham 250g - Retailer: GroceryCo
+- **Product 23**: Smoked Turkey Breast 180g - Retailer: DeliCorner
+- **Product 24**: Spanish Chorizo 220g - Retailer: FreshMart
+
+### Bread Category (ID: `bread`)
+- **Product 31**: Artisan Sourdough Loaf 500g - Retailer: BakeryPlus
+- **Product 32**: Whole Wheat Bread 600g - Retailer: GroceryCo
+- **Product 33**: Croissants Pack of 6 - Retailer: BakeryPlus
+- **Product 34**: Multigrain Baguette 400g - Retailer: FreshMart
+
+### Dairy Category (ID: `dairy`)
+- **Product 41**: Organic Whole Milk 1L - Retailer: FreshMart
+- **Product 42**: Greek Yogurt 500g - Retailer: DairyDirect
+- **Product 43**: Fresh Butter 250g - Retailer: GroceryCo
+- **Product 44**: (continues in code...)
+
+---
+
+## 📂 Category Images
+
+### Themed Categories
+- **christmas**: Christmas themed category
+- **halloween**: Halloween themed category
+
+### Product Categories
+- **offers**: Φρούτα & Λαχανικά (Fruits & Vegetables)
+- **fresh-meat**: Φρέσκο Κρέας (Fresh Meat)
+- **deli**: Αλλαντικά (Deli)
+- **cheese**: Τυροκομικά (Cheese)
+- **bread**: Ψωμί & Αρτοποιήματα (Bread & Bakery)
+- **dairy**: Γαλακτοκομικά (Dairy)
+- **drinks**: Ποτά (Drinks)
+- **grocery-items**: Είδη Παντοπωλείου (Grocery Items)
+
+---
+
+## 🏪 Retailer Logos
+
+### Active Retailers
+- **GroceryCo**: Main supermarket chain
+- **FreshMart**: Fresh produce and specialty items
+- **MeatMarket**: Meat specialist
+- **DeliCorner**: Deli meats and specialty items
+- **BakeryPlus**: Bakery items
+- **DairyDirect**: Dairy products specialist
+- **SuperSave**: Discount retailer (referenced in cart system)
+
+---
+
+## 🎯 Suggested File Naming Convention
+
+### Option A: By Product ID
+```
+products/
+  product-1.jpg    (Aged Cheddar)
+  product-2.jpg    (Greek Feta)
+  product-3.jpg    (Mozzarella)
+  product-11.jpg   (Beef Steak)
+  product-21.jpg   (Prosciutto)
+  product-31.jpg   (Sourdough)
+  product-41.jpg   (Milk)
+  ...
+```
+
+### Option B: By Product Name (Slug)
+```
+products/
+  aged-cheddar.jpg
+  greek-feta.jpg
+  mozzarella-buffalo.jpg
+  prime-beef-steak.jpg
+  italian-prosciutto.jpg
+  artisan-sourdough.jpg
+  organic-milk.jpg
+  ...
+```
+
+### Category Images
+```
+categories/
+  cheese.jpg
+  fresh-meat.jpg
+  deli.jpg
+  bread.jpg
+  dairy.jpg
+  drinks.jpg
+  grocery-items.jpg
+  christmas.jpg
+  halloween.jpg
+```
+
+### Retailer Logos
+```
+retailers/
+  groceryco.jpg
+  freshmart.jpg
+  meatmarket.jpg
+  delicorner.jpg
+  bakeryplus.jpg
+  dairydirect.jpg
+  supersave.jpg
+```
+
+---
+
+## 🔗 How to Use Your Images
+
+### Step 1: Upload to GitHub
+1. Create a public GitHub repository (e.g., `wave-grocery-assets`)
+2. Organize images using one of the naming conventions above
+3. Push your images to the repository
+
+### Step 2: Get Raw URLs
+GitHub raw URLs follow this pattern:
+```
+https://raw.githubusercontent.com/YOUR_USERNAME/REPO_NAME/main/path/to/image.jpg
+```
+
+Example:
+```
+https://raw.githubusercontent.com/john-doe/wave-grocery-assets/main/products/product-1.jpg
+```
+
+### Step 3: Update the Code
+Let me know when your images are uploaded and I'll update:
+- `/components/ProductCatalogueView.tsx` - Product images
+- `/components/CategoriesView.tsx` - Category images
+- `/components/CartView.tsx` - Retailer logos
+
+---
+
+## 📐 Image Dimensions & Specifications
+
+### Product Images (Catalogue & Cart)
+- **Aspect Ratio**: 1:1 (Square)
+- **Recommended Size**: 400×400px or 800×800px
+- **Minimum Size**: 300×300px
+- **Maximum Size**: 1200×1200px
+- **Format**: JPG or PNG
+- **Usage**: 
+  - Product catalogue grid (displayed in square tiles)
+  - Cart items (72×72px thumbnails)
+  - Product detail views
+
+### Category Images
+
+#### Themed Categories (Christmas, Halloween, etc.)
+- **Aspect Ratio**: Flexible (displayed at 168px min-height)
+- **Recommended Size**: 400×400px or 600×600px
+- **Format**: JPG or PNG
+- **Display**: Full card coverage with gradient overlay
+- **Usage**: Homepage category cards (2-column grid)
+
+#### Product Categories (Cheese, Meat, Dairy, etc.)
+- **Aspect Ratio**: Flexible, portrait or square works best
+- **Recommended Size**: 400×500px or 500×600px
+- **Maximum Height**: 140px (when displayed)
+- **Format**: PNG with transparent background preferred, or JPG
+- **Display**: Contained within card with padding
+- **Usage**: Categories view grid (2-column layout, 208px min-height cards)
+
+### Retailer Logos
+- **Aspect Ratio**: 1:1 (Square) preferred
+- **Recommended Size**: 200×200px or 400×400px
+- **Minimum Size**: 100×100px
+- **Format**: PNG with transparent background preferred
+- **Usage**:
+  - Product tile badges (16×16px display)
+  - Cart retailer headers (larger display)
+  - Checkout screens
+
+### Banner/Carousel Images (Homepage)
+- **Aspect Ratio**: ~16:9 or 2:1 (landscape)
+- **Recommended Size**: 750×400px or 1125×600px
+- **Width**: Match container width (343px on mobile)
+- **Format**: JPG or PNG
+- **Usage**: Homepage carousel/banner area
+
+---
+
+## 📝 Image Quality Guidelines
+
+- **Format**: 
+  - Use PNG for logos and images requiring transparency
+  - Use JPG for photographs and product images
+- **Compression**: Optimize images to keep file sizes under 200KB per image
+- **Quality**: 80-90% quality for JPG is ideal
+- **Consistency**: 
+  - Use similar lighting/style across product images
+  - Maintain consistent background (white or transparent recommended)
+  - Keep composition centered and consistent
+- **Color Profile**: sRGB recommended for web display
+
+---
+
+---
+
+## 🚀 Quick Start
+
+**Minimal set to get started** (covers most visible areas):
+
+### Priority 1 - Product Images (400×400px, Square, JPG/PNG)
+1. 4 cheese products (IDs: 1-4)
+2. 4 fresh meat products (IDs: 11-14)
+3. 4 deli products (IDs: 21-24)
+
+### Priority 2 - Category Images 
+1. **Product Categories** (400×500px, PNG with transparency preferred):
+   - cheese.png
+   - fresh-meat.png
+   - deli.png
+   - bread.png
+   - dairy.png
+
+### Priority 3 - Retailer Logos (200×200px, Square, PNG with transparency)
+1. groceryco.png
+2. freshmart.png
+3. meatmarket.png
+
+### Priority 4 - Optional
+- Additional product images
+- Themed category images (Christmas, Halloween)
+- Banner images for homepage carousel
+
+Once these are uploaded to GitHub, share the repository URL with me and I'll update all the image references in the code!
